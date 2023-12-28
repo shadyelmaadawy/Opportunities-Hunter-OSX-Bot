@@ -130,7 +130,7 @@ public extension OhLogTextView {
         self.printLog()
         botEvent.description.forEach { value in
             self.appendChar(botEvent.color, value)
-            self.sleep(for: 0.035)//25)
+            self.sleep(for: 0.05)
         }
         self.appendSuffix(newLine: true)
         
@@ -151,10 +151,7 @@ public extension OhLogTextView {
 
         self.appendSuffix(newLine: true)
         userEnterEvent.send(textBuffer.value)
-    }
-    
-    func userPressBackspace() {
-        // remove from queue not handled yet
+        textBuffer.send("")
     }
 
     func logEvents(event: BotEvents) {
@@ -173,7 +170,7 @@ public extension OhLogTextView {
         for(index, value) in botLog.messages.enumerated() {
             value.forEach { messageValue in
                 self.appendChar(botLog.color[index], messageValue)
-                self.sleep(for: 0.035)
+                self.sleep(for: 0.05)
             }
         }
         self.appendSuffix(newLine: false)

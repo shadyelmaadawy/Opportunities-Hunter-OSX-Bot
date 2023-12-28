@@ -7,8 +7,25 @@
 
 import Foundation
 
-extension String {
-    public subscript(_ idx: Int) -> String {
+internal extension String {
+    
+    subscript(_ idx: Int) -> String {
         String(self[self.index(self.startIndex, offsetBy: idx)])
     }
+    
+    @discardableResult
+    func buildFromIdxs(_ startIdx: Int, _ endIdx: Int, _ replaceString: String?) -> String {
+        var textBuffer = String.init()
+
+        for i in (startIdx...(endIdx - 1)) {
+            textBuffer.append(self[i])
+        }
+        
+        guard let replaceString = replaceString else {
+            return textBuffer
+        }
+        textBuffer.append(replaceString)
+        return textBuffer
+    }
+    
 }

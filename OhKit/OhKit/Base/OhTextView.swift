@@ -10,7 +10,6 @@ import Combine
 public protocol TextViewDelegates: AnyObject {
     var textBuffer: CurrentValueSubject<String, Never> { get }
     func userPressEnter()
-    func userPressBackspace()
 }
 
 public class OhTextView: NSTextView, NSTextViewDelegate {
@@ -80,7 +79,7 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
                 affectedCharRange.location >= self.editLocation
             ) && replacementString?.count == 0) {
             
-            self.textDelegates?.userPressBackspace()
+            // MARK: - Refactor this part later
             
             return true
             
@@ -99,15 +98,8 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
                 self.textDelegates?.textBuffer.value = replacementString
                 
             } else {
-            
-                var textBuffer = String.init()
 
-                for i in (self.editLocation...(self.string.count - 1)) {
-                    textBuffer.append(self.string[i])
-                }
-                textBuffer.append(replacementString)
-                
-                self.textDelegates?.textBuffer.value = textBuffer
+                self.textDelegates?.textBuffer.value = self.string.buildFromIdxs(self.editLocation, self.string.count, replacementString)
                 
             }
             return true
