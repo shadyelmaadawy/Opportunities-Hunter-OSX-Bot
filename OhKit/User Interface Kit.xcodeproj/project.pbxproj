@@ -19,6 +19,8 @@
 		61C815F02B2FAF2C00A0FDE1 /* OhClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C815EF2B2FAF2C00A0FDE1 /* OhClipView.swift */; };
 		61C815F32B2FB9BE00A0FDE1 /* OhScrollableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */; };
 		61DF944E2B3CECC100C9ABBE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF944D2B3CECC100C9ABBE /* Queue.swift */; };
+		61DF94522B3D62E400C9ABBE /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF94512B3D62E400C9ABBE /* NSObject+Ext.swift */; };
+		61DF94542B3D64D000C9ABBE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF94532B3D64D000C9ABBE /* String+Ext.swift */; };
 		61E88D122B2F4674004751CD /* OhTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E88D112B2F4674004751CD /* OhTextField.swift */; };
 		61F612FD2B2E8B5B009485A5 /* NSView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F612FC2B2E8B5B009485A5 /* NSView+Ext.swift */; };
 		61F612FF2B2E8BA0009485A5 /* OhVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F612FE2B2E8BA0009485A5 /* OhVisualEffectView.swift */; };
@@ -44,6 +46,8 @@
 		61C815EF2B2FAF2C00A0FDE1 /* OhClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhClipView.swift; sourceTree = "<group>"; };
 		61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhScrollableTextView.swift; sourceTree = "<group>"; };
 		61DF944D2B3CECC100C9ABBE /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		61DF94512B3D62E400C9ABBE /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
+		61DF94532B3D64D000C9ABBE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		61E88D112B2F4674004751CD /* OhTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhTextField.swift; sourceTree = "<group>"; };
 		61F612FC2B2E8B5B009485A5 /* NSView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Ext.swift"; sourceTree = "<group>"; };
 		61F612FE2B2E8BA0009485A5 /* OhVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhVisualEffectView.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				61F6130A2B2EA234009485A5 /* NSSize+Ext.swift */,
 				61A0C20A2B2FE6BC00B02EE2 /* Date+Ext.swift */,
 				61A0C20C2B2FE70F00B02EE2 /* NSAttributedString+Ext.swift */,
+				61DF94512B3D62E400C9ABBE /* NSObject+Ext.swift */,
+				61DF94532B3D64D000C9ABBE /* String+Ext.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -255,7 +261,9 @@
 				61A753B22B2E739900540242 /* OhKit.docc in Sources */,
 				61F612FF2B2E8BA0009485A5 /* OhVisualEffectView.swift in Sources */,
 				61F613032B2E983A009485A5 /* OhWindowController.swift in Sources */,
+				61DF94542B3D64D000C9ABBE /* String+Ext.swift in Sources */,
 				619C023E2B2F97B800736380 /* OhTextView.swift in Sources */,
+				61DF94522B3D62E400C9ABBE /* NSObject+Ext.swift in Sources */,
 				61A0C21C2B2FEE2600B02EE2 /* NSFont+Ext.swift in Sources */,
 				61A0C21E2B30027100B02EE2 /* OhLogTextView.swift in Sources */,
 				61F612FD2B2E8B5B009485A5 /* NSView+Ext.swift in Sources */,

@@ -8,14 +8,6 @@
 import AppKit
 import Combine
 
-extension NSObject {
-    
-    func sleep(for seconds: Double) {
-        Thread.sleep(forTimeInterval: seconds)
-    }
-    
-}
-
 public class OhLogTextView: OhScrollableTextView, TextViewDelegates {
     
     // MARK: - Properties
@@ -24,8 +16,8 @@ public class OhLogTextView: OhScrollableTextView, TextViewDelegates {
     private let threadSemaphore = DispatchSemaphore(value: 0)
 
     private var logEventsQueue = Queue<BotEvents>()
-    private var userInputsCharacters = Queue<Character>()
     
+    public var textBuffer = CurrentValueSubject<String, Never>("")
     public let userEnterEvent = PassthroughSubject<String, Never>()
 
     // MARK: - Enums
@@ -138,7 +130,7 @@ public extension OhLogTextView {
         self.printLog()
         botEvent.description.forEach { value in
             self.appendChar(botEvent.color, value)
-            self.sleep(for: 0.025)
+            self.sleep(for: 0.035)//25)
         }
         self.appendSuffix(newLine: true)
         
@@ -151,27 +143,14 @@ public extension OhLogTextView {
 
     }
     
-    func userInputs(_ input: String) {
-        userInputsCharacters.enqueue(Character(input))
-    }
-
     func userPressEnter() {
         
-        guard userInputsCharacters.isEmpty() == false else {
+        guard textBuffer.value.count > 0 else {
             return
         }
-        self.textView.isEditable = false
-        var userInput = String.init()
-        
-        repeat {
-            guard let character = userInputsCharacters.dequeue() else {
-                break
-            }
-            userInput.append(character)
-        } while userInputsCharacters.isEmpty() == false
-        
+
         self.appendSuffix(newLine: true)
-        userEnterEvent.send(userInput)
+        userEnterEvent.send(textBuffer.value)
     }
     
     func userPressBackspace() {
@@ -194,7 +173,7 @@ public extension OhLogTextView {
         for(index, value) in botLog.messages.enumerated() {
             value.forEach { messageValue in
                 self.appendChar(botLog.color[index], messageValue)
-                self.sleep(for: 0.025)
+                self.sleep(for: 0.035)
             }
         }
         self.appendSuffix(newLine: false)

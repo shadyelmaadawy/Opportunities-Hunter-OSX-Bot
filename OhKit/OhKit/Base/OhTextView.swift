@@ -6,9 +6,9 @@
 //
 
 import AppKit
-
+import Combine
 public protocol TextViewDelegates: AnyObject {
-    func userInputs(_ input: String)
+    var textBuffer: CurrentValueSubject<String, Never> { get }
     func userPressEnter()
     func userPressBackspace()
 }
@@ -28,11 +28,13 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
         }
         set {
             DispatchQueue.main.async {
+                
                 if(newValue == true) {
                     self.editLocation = self.string.count
                 } else {
                     self.editLocation = -1
                 }
+                
                 super.isEditable = newValue
             }
         }
@@ -77,27 +79,55 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
                 affectedCharRange.location <= self.string.count &&
                 affectedCharRange.location >= self.editLocation
             ) && replacementString?.count == 0) {
+            
             self.textDelegates?.userPressBackspace()
+            
             return true
-        } else if (affectedCharRange.location < self.editLocation) {
+            
+        } else if (self.editLocation > 0 && affectedCharRange.location < self.editLocation) {
+        
             return false
+            
         } else {
+            
             guard let replacementString = replacementString, replacementString.count > 0 else {
                 return true
             }
-            self.textDelegates?.userInputs(replacementString)
+            
+            if(self.editLocation == affectedCharRange.location) {
+                
+                self.textDelegates?.textBuffer.value = replacementString
+                
+            } else {
+            
+                var textBuffer = String.init()
+
+                for i in (self.editLocation...(self.string.count - 1)) {
+                    textBuffer.append(self.string[i])
+                }
+                textBuffer.append(replacementString)
+                
+                self.textDelegates?.textBuffer.value = textBuffer
+                
+            }
             return true
         }
 
     }
     
     public override func doCommand(by selector: Selector) {
+        
         if (selector == #selector(insertNewline(_:))) {
             textDelegates?.userPressEnter()
+            
         } else if(selector == #selector(deleteBackward(_:)) || selector == #selector(deleteForward(_:))) {
+        
             super.doCommand(by: #selector(deleteBackward(_:)))
+            
         } else {
+            
             super.doCommand(by: selector)
+            
         }
     }
 }
