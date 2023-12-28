@@ -73,16 +73,16 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
     	
     public override func shouldChangeText(in affectedCharRange: NSRange, replacementString: String?) -> Bool {
         if(
-            self.editLocation > 0 && self.editLocation <= affectedCharRange.location &&
-            replacementString?.count == 0) {
+            self.editLocation > 0 && (
+                affectedCharRange.location <= self.string.count &&
+                affectedCharRange.location >= self.editLocation
+            ) && replacementString?.count == 0) {
             self.textDelegates?.userPressBackspace()
             return true
-        }
-        else if (affectedCharRange.length == 1 || affectedCharRange.location < self.string.count) {
+        } else if (affectedCharRange.location < self.editLocation) {
             return false
-        }
-        else {
-            guard let replacementString = replacementString else {
+        } else {
+            guard let replacementString = replacementString, replacementString.count > 0 else {
                 return true
             }
             self.textDelegates?.userInputs(replacementString)

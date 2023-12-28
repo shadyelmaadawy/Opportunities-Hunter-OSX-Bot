@@ -109,6 +109,7 @@ public class OhLogTextView: OhScrollableTextView, TextViewDelegates {
     
     public override init() {
         super.init()
+        
         self.setDelegates(self)
         
         DispatchQueue.global(qos: .userInteractive).async {
@@ -187,6 +188,7 @@ public extension OhLogTextView {
     }
     
     func printLog() {
+        
         let botLog = NSAttributedString.buildArsenalLog()
         
         for(index, value) in botLog.messages.enumerated() {
