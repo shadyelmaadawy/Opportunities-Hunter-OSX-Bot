@@ -14,6 +14,9 @@ final class ViewController: OhViewController {
         return baseTextField
     }()
     
+    
+    // MARK: - print(MemoryLayout<Int32>.size)
+    // MARK: - علشان تعرفوا تغلطوا فيا تاني انا وعيان
   override func viewDidLoad() {
       super.viewDidLoad()
       
