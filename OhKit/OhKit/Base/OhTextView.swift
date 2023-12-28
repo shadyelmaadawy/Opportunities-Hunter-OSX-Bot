@@ -27,12 +27,14 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
             return super.isEditable
         }
         set {
-            if(newValue == true) {
-                self.editLocation = self.string.count
-            } else {
-                self.editLocation = -1
+            DispatchQueue.main.async {
+                if(newValue == true) {
+                    self.editLocation = self.string.count
+                } else {
+                    self.editLocation = -1
+                }
+                super.isEditable = newValue
             }
-            super.isEditable = newValue
         }
     }
     weak var textDelegates: TextViewDelegates?
@@ -122,6 +124,8 @@ private extension OhTextView {
         self.isHorizontallyResizable = false
 
         self.textContainerInset = NSSize.init(width: 4.0, height: 8.0)
+  
+        self.font = .getFont(.regular, textStyle: .footnote)
     }
     
 }

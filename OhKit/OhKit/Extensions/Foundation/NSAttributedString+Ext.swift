@@ -12,7 +12,7 @@ internal extension NSAttributedString {
     static func buildArsenalLog() -> (messages: [String], color: [NSColor]) {
         return (messages: [
             Date.getCurrentDate(),
-            " shadudiix arsenal > ",
+            " shadudiix arsenal >",
           ], color: [
             .systemGreen,
             .systemYellow,

@@ -17,12 +17,15 @@ final class ViewController: OhViewController {
   override func viewDidLoad() {
       super.viewDidLoad()
       
-      let isFirstLaunch = false
+      let isFirstLaunch = true
       logTextView.userEnterEvent
           .sink { [unowned self] value in
               print(value)
               logTextView.logEvents(event: .usageExplanation(firstPart: true))
               logTextView.logEvents(event: .usageExplanation(firstPart: false))
+              logTextView.logEvents(event: .listeningStarted)
+              logTextView.logEvents(event: .launchDetectingOperation)
+
           }.store(in: &self.subscriptions)
       
       logTextView.logEvents(event: .welcomeMessage(firstLaunch: isFirstLaunch))
@@ -34,9 +37,7 @@ final class ViewController: OhViewController {
       } else {
           logTextView.logEvents(event: .reinitiateModuleQuestion)
       }
-      logTextView.logEvents(event: .listeningStarted)
-      logTextView.logEvents(event: .launchDetectingOperation)
-//      
+//
 //      
 //      for _ in 0...20 {
 //          logTextView.logOpportunitiesDetection("3 new opportunities detected match your query", source: .wuzzuf)

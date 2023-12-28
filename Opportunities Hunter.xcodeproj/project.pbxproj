@@ -85,8 +85,8 @@
 		61A2F0042B29B7DD0016527D = {
 			isa = PBXGroup;
 			children = (
-				61A2F00F2B29B7DD0016527D /* Opportunities Hunter */,
 				61A2F00E2B29B7DD0016527D /* Products */,
+				61A2F00F2B29B7DD0016527D /* Opportunities Hunter */,
 				61A753C32B2E743B00540242 /* Frameworks */,
 			);
 			sourceTree = "<group>";

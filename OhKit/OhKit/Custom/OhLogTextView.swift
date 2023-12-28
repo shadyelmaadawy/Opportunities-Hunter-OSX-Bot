@@ -23,7 +23,6 @@ public class OhLogTextView: OhScrollableTextView, TextViewDelegates {
     private let queueLock = NSLock()
     private let threadSemaphore = DispatchSemaphore(value: 0)
 
-    
     private var logEventsQueue = Queue<BotEvents>()
     private var userInputsCharacters = Queue<Character>()
     
@@ -135,22 +134,20 @@ public extension OhLogTextView {
         }
         self.queueLock.unlock()
   
-        let botLog = NSAttributedString.buildArsenalLog()
-        
-        for(index, value) in botLog.messages.enumerated() {
-            value.forEach { messageValue in
-                self.appendChar(botLog.color[index], messageValue)
-                self.sleep(for: 0.025)
-            }
-        }
-        self.appendSuffix(newLine: false)
-        
+        self.printLog()
         botEvent.description.forEach { value in
             self.appendChar(botEvent.color, value)
             self.sleep(for: 0.025)
         }
         self.appendSuffix(newLine: true)
         
+        if(botEvent == .queryRequired) {
+            self.printLog()
+            self.textView.isEditable = true
+        } else {
+            self.textView.isEditable = false
+        }
+
     }
     
     func userInputs(_ input: String) {
@@ -175,7 +172,7 @@ public extension OhLogTextView {
     }
     
     func userPressBackspace() {
-        
+        // remove from queue not handled yet
     }
 
     func logEvents(event: BotEvents) {
@@ -184,6 +181,19 @@ public extension OhLogTextView {
             logEventsQueue.enqueue(event)
         queueLock.unlock()
         threadSemaphore.signal()
+
+    }
+    
+    func printLog() {
+        let botLog = NSAttributedString.buildArsenalLog()
+        
+        for(index, value) in botLog.messages.enumerated() {
+            value.forEach { messageValue in
+                self.appendChar(botLog.color[index], messageValue)
+                self.sleep(for: 0.025)
+            }
+        }
+        self.appendSuffix(newLine: false)
 
     }
     
