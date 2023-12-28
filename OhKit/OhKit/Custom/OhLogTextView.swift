@@ -159,6 +159,7 @@ public extension OhLogTextView {
         guard userInputsCharacters.isEmpty() == false else {
             return
         }
+        self.textView.isEditable = false
         var userInput = String.init()
         
         repeat {
@@ -168,6 +169,7 @@ public extension OhLogTextView {
             userInput.append(character)
         } while userInputsCharacters.isEmpty() == false
         
+        self.appendSuffix(newLine: true)
         userEnterEvent.send(userInput)
     }
     

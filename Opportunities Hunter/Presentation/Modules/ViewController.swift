@@ -20,7 +20,7 @@ final class ViewController: OhViewController {
       let isFirstLaunch = true
       logTextView.userEnterEvent
           .sink { [unowned self] value in
-              print(value)
+              print("enter pressed: \(value)")
               logTextView.logEvents(event: .usageExplanation(firstPart: true))
               logTextView.logEvents(event: .usageExplanation(firstPart: false))
               logTextView.logEvents(event: .listeningStarted)

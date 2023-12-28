@@ -70,10 +70,11 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
+    	
     public override func shouldChangeText(in affectedCharRange: NSRange, replacementString: String?) -> Bool {
-        if(self.editLocation > 0 && self.string.count > self.editLocation && replacementString?.count == 0 ) {
+        if(
+            self.editLocation > 0 && self.editLocation <= affectedCharRange.location &&
+            replacementString?.count == 0) {
             self.textDelegates?.userPressBackspace()
             return true
         }
@@ -92,7 +93,6 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
     
     public override func doCommand(by selector: Selector) {
         if (selector == #selector(insertNewline(_:))) {
-            super.doCommand(by: selector)
             textDelegates?.userPressEnter()
         } else if(selector == #selector(deleteBackward(_:)) || selector == #selector(deleteForward(_:))) {
             super.doCommand(by: #selector(deleteBackward(_:)))

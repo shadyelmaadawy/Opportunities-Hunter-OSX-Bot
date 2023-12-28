@@ -56,7 +56,7 @@ public extension OhScrollableTextView {
 
     }
     func appendSuffix(newLine: Bool = false) {
-        DispatchQueue.main.sync { self.textView.textStorage?.append(NSAttributedString.buildAttributedBuffer(messagesBuffer: newLine ? "" : " ", colors: .black, withNewLine: newLine))
+        DispatchQueue.main.async { self.textView.textStorage?.append(NSAttributedString.buildAttributedBuffer(messagesBuffer: newLine ? "" : " ", colors: .black, withNewLine: newLine))
         }
     }
     
