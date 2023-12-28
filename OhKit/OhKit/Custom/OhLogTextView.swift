@@ -112,7 +112,7 @@ public class OhLogTextView: OhScrollableTextView, TextViewDelegates {
         super.init()
         self.setDelegates(self)
         
-        DispatchQueue.global(qos: .userInteractive).asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.global(qos: .userInteractive).async {
             repeat { self.repeatBlock() } while(true)
         }
     }
@@ -140,17 +140,16 @@ public extension OhLogTextView {
         for(index, value) in botLog.messages.enumerated() {
             value.forEach { messageValue in
                 self.appendChar(botLog.color[index], messageValue)
+                self.sleep(for: 0.025)
             }
-            self.sleep(for: 0.002)
         }
         self.appendSuffix(newLine: false)
         
         botEvent.description.forEach { value in
             self.appendChar(botEvent.color, value)
-            self.sleep(for: 0.002)
+            self.sleep(for: 0.025)
         }
         self.appendSuffix(newLine: true)
-
         
     }
     
