@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		619C023E2B2F97B800736380 /* OhTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619C023D2B2F97B800736380 /* OhTextView.swift */; };
+		619C02402B2F9F6200736380 /* OhScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619C023F2B2F9F6200736380 /* OhScrollView.swift */; };
+		61A0C20B2B2FE6BC00B02EE2 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0C20A2B2FE6BC00B02EE2 /* Date+Ext.swift */; };
+		61A0C20D2B2FE70F00B02EE2 /* NSAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0C20C2B2FE70F00B02EE2 /* NSAttributedString+Ext.swift */; };
+		61A0C21C2B2FEE2600B02EE2 /* NSFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0C21B2B2FEE2600B02EE2 /* NSFont+Ext.swift */; };
+		61A0C21E2B30027100B02EE2 /* OhLogTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0C21D2B30027100B02EE2 /* OhLogTextView.swift */; };
+		61A753B22B2E739900540242 /* OhKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 61A753B12B2E739900540242 /* OhKit.docc */; };
+		61A753B32B2E739900540242 /* OhKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A753B02B2E739900540242 /* OhKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61A753C12B2E73D600540242 /* OhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A753C02B2E73D600540242 /* OhViewController.swift */; };
+		61C815F02B2FAF2C00A0FDE1 /* OhClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C815EF2B2FAF2C00A0FDE1 /* OhClipView.swift */; };
+		61C815F32B2FB9BE00A0FDE1 /* OhScrollableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */; };
+		61DF944E2B3CECC100C9ABBE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF944D2B3CECC100C9ABBE /* Queue.swift */; };
+		61E88D122B2F4674004751CD /* OhTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E88D112B2F4674004751CD /* OhTextField.swift */; };
+		61F612FD2B2E8B5B009485A5 /* NSView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F612FC2B2E8B5B009485A5 /* NSView+Ext.swift */; };
+		61F612FF2B2E8BA0009485A5 /* OhVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F612FE2B2E8BA0009485A5 /* OhVisualEffectView.swift */; };
+		61F613012B2E8FE7009485A5 /* OhView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F613002B2E8FE6009485A5 /* OhView.swift */; };
+		61F613032B2E983A009485A5 /* OhWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F613022B2E983A009485A5 /* OhWindowController.swift */; };
+		61F613052B2E9AFE009485A5 /* NSRect+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F613042B2E9AFE009485A5 /* NSRect+Ext.swift */; };
+		61F613072B2E9C1C009485A5 /* OhWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F613062B2E9C1C009485A5 /* OhWindow.swift */; };
+		61F6130B2B2EA234009485A5 /* NSSize+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6130A2B2EA234009485A5 /* NSSize+Ext.swift */; };
+		61F6130D2B2EA254009485A5 /* NSWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6130C2B2EA254009485A5 /* NSWindow+Ext.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		619C023D2B2F97B800736380 /* OhTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhTextView.swift; sourceTree = "<group>"; };
+		619C023F2B2F9F6200736380 /* OhScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhScrollView.swift; sourceTree = "<group>"; };
+		61A0C20A2B2FE6BC00B02EE2 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		61A0C20C2B2FE70F00B02EE2 /* NSAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Ext.swift"; sourceTree = "<group>"; };
+		61A0C21B2B2FEE2600B02EE2 /* NSFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont+Ext.swift"; sourceTree = "<group>"; };
+		61A0C21D2B30027100B02EE2 /* OhLogTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhLogTextView.swift; sourceTree = "<group>"; };
+		61A753AD2B2E739900540242 /* OhKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OhKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61A753B02B2E739900540242 /* OhKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OhKit.h; sourceTree = "<group>"; };
+		61A753B12B2E739900540242 /* OhKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OhKit.docc; sourceTree = "<group>"; };
+		61A753C02B2E73D600540242 /* OhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhViewController.swift; sourceTree = "<group>"; };
+		61C815EF2B2FAF2C00A0FDE1 /* OhClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhClipView.swift; sourceTree = "<group>"; };
+		61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhScrollableTextView.swift; sourceTree = "<group>"; };
+		61DF944D2B3CECC100C9ABBE /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		61E88D112B2F4674004751CD /* OhTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhTextField.swift; sourceTree = "<group>"; };
+		61F612FC2B2E8B5B009485A5 /* NSView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Ext.swift"; sourceTree = "<group>"; };
+		61F612FE2B2E8BA0009485A5 /* OhVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhVisualEffectView.swift; sourceTree = "<group>"; };
+		61F613002B2E8FE6009485A5 /* OhView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhView.swift; sourceTree = "<group>"; };
+		61F613022B2E983A009485A5 /* OhWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhWindowController.swift; sourceTree = "<group>"; };
+		61F613042B2E9AFE009485A5 /* NSRect+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRect+Ext.swift"; sourceTree = "<group>"; };
+		61F613062B2E9C1C009485A5 /* OhWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhWindow.swift; sourceTree = "<group>"; };
+		61F6130A2B2EA234009485A5 /* NSSize+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSize+Ext.swift"; sourceTree = "<group>"; };
+		61F6130C2B2EA254009485A5 /* NSWindow+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSWindow+Ext.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61A753AA2B2E739900540242 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61A753A32B2E739900540242 = {
+			isa = PBXGroup;
+			children = (
+				61A753AF2B2E739900540242 /* OhKit */,
+				61A753AE2B2E739900540242 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61A753AE2B2E739900540242 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61A753AD2B2E739900540242 /* OhKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61A753AF2B2E739900540242 /* OhKit */ = {
+			isa = PBXGroup;
+			children = (
+				61DF944C2B3CECA800C9ABBE /* Utilities */,
+				61C815F12B2FB9A400A0FDE1 /* Custom */,
+				61A753C72B2E748A00540242 /* Base */,
+				61A753C82B2E749000540242 /* Configuration */,
+				61F612FB2B2E8B43009485A5 /* Extensions */,
+			);
+			path = OhKit;
+			sourceTree = "<group>";
+		};
+		61A753C72B2E748A00540242 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				61A753C02B2E73D600540242 /* OhViewController.swift */,
+				61F612FE2B2E8BA0009485A5 /* OhVisualEffectView.swift */,
+				61F613002B2E8FE6009485A5 /* OhView.swift */,
+				61F613022B2E983A009485A5 /* OhWindowController.swift */,
+				61F613062B2E9C1C009485A5 /* OhWindow.swift */,
+				61E88D112B2F4674004751CD /* OhTextField.swift */,
+				619C023D2B2F97B800736380 /* OhTextView.swift */,
+				619C023F2B2F9F6200736380 /* OhScrollView.swift */,
+				61C815EF2B2FAF2C00A0FDE1 /* OhClipView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		61A753C82B2E749000540242 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				61A753B02B2E739900540242 /* OhKit.h */,
+				61A753B12B2E739900540242 /* OhKit.docc */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		61C815F12B2FB9A400A0FDE1 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */,
+				61A0C21D2B30027100B02EE2 /* OhLogTextView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		61DF944C2B3CECA800C9ABBE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				61DF944D2B3CECC100C9ABBE /* Queue.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		61F612FB2B2E8B43009485A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61F613092B2EA17B009485A5 /* Foundation */,
+				61F613082B2EA167009485A5 /* AppKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		61F613082B2EA167009485A5 /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				61F612FC2B2E8B5B009485A5 /* NSView+Ext.swift */,
+				61F6130C2B2EA254009485A5 /* NSWindow+Ext.swift */,
+				61A0C21B2B2FEE2600B02EE2 /* NSFont+Ext.swift */,
+			);
+			path = AppKit;
+			sourceTree = "<group>";
+		};
+		61F613092B2EA17B009485A5 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				61F613042B2E9AFE009485A5 /* NSRect+Ext.swift */,
+				61F6130A2B2EA234009485A5 /* NSSize+Ext.swift */,
+				61A0C20A2B2FE6BC00B02EE2 /* Date+Ext.swift */,
+				61A0C20C2B2FE70F00B02EE2 /* NSAttributedString+Ext.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		61A753A82B2E739900540242 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61A753B32B2E739900540242 /* OhKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		61A753AC2B2E739900540242 /* OhKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61A753B62B2E739900540242 /* Build configuration list for PBXNativeTarget "OhKit" */;
+			buildPhases = (
+				61A753A82B2E739900540242 /* Headers */,
+				61A753A92B2E739900540242 /* Sources */,
+				61A753AA2B2E739900540242 /* Frameworks */,
+				61A753AB2B2E739900540242 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OhKit;
+			productName = OhKit;
+			productReference = 61A753AD2B2E739900540242 /* OhKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61A753A42B2E739900540242 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					61A753AC2B2E739900540242 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 61A753A72B2E739900540242 /* Build configuration list for PBXProject "User Interface Kit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61A753A32B2E739900540242;
+			productRefGroup = 61A753AE2B2E739900540242 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61A753AC2B2E739900540242 /* OhKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61A753AB2B2E739900540242 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61A753A92B2E739900540242 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				619C02402B2F9F6200736380 /* OhScrollView.swift in Sources */,
+				61F6130D2B2EA254009485A5 /* NSWindow+Ext.swift in Sources */,
+				61A0C20D2B2FE70F00B02EE2 /* NSAttributedString+Ext.swift in Sources */,
+				61F6130B2B2EA234009485A5 /* NSSize+Ext.swift in Sources */,
+				61A0C20B2B2FE6BC00B02EE2 /* Date+Ext.swift in Sources */,
+				61F613072B2E9C1C009485A5 /* OhWindow.swift in Sources */,
+				61C815F32B2FB9BE00A0FDE1 /* OhScrollableTextView.swift in Sources */,
+				61A753B22B2E739900540242 /* OhKit.docc in Sources */,
+				61F612FF2B2E8BA0009485A5 /* OhVisualEffectView.swift in Sources */,
+				61F613032B2E983A009485A5 /* OhWindowController.swift in Sources */,
+				619C023E2B2F97B800736380 /* OhTextView.swift in Sources */,
+				61A0C21C2B2FEE2600B02EE2 /* NSFont+Ext.swift in Sources */,
+				61A0C21E2B30027100B02EE2 /* OhLogTextView.swift in Sources */,
+				61F612FD2B2E8B5B009485A5 /* NSView+Ext.swift in Sources */,
+				61C815F02B2FAF2C00A0FDE1 /* OhClipView.swift in Sources */,
+				61A753C12B2E73D600540242 /* OhViewController.swift in Sources */,
+				61DF944E2B3CECC100C9ABBE /* Queue.swift in Sources */,
+				61E88D122B2F4674004751CD /* OhTextField.swift in Sources */,
+				61F613012B2E8FE7009485A5 /* OhView.swift in Sources */,
+				61F613052B2E9AFE009485A5 /* NSRect+Ext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		61A753B42B2E739900540242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		61A753B52B2E739900540242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		61A753B72B2E739900540242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = shadudiix.com.OhKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		61A753B82B2E739900540242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = shadudiix.com.OhKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61A753A72B2E739900540242 /* Build configuration list for PBXProject "User Interface Kit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61A753B42B2E739900540242 /* Debug */,
+				61A753B52B2E739900540242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61A753B62B2E739900540242 /* Build configuration list for PBXNativeTarget "OhKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61A753B72B2E739900540242 /* Debug */,
+				61A753B82B2E739900540242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61A753A42B2E739900540242 /* Project object */;
+}
