@@ -202,16 +202,8 @@
 			children = (
 				61A8BB362B3EB68F009433E5 /* Model */,
 				61A8BB352B3E821A009433E5 /* View */,
-				61A8BB342B3E8213009433E5 /* View Model */,
 			);
 			path = "Bot Logger";
-			sourceTree = "<group>";
-		};
-		61A8BB342B3E8213009433E5 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Model";
 			sourceTree = "<group>";
 		};
 		61A8BB352B3E821A009433E5 /* View */ = {
