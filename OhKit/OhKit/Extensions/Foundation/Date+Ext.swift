@@ -9,6 +9,8 @@ import Foundation
 
 internal extension Date {
     
+    /// Get formatted current date
+    /// - Returns: current date as string
     static func getCurrentDate() -> String {
 
         let dateFormatter = DateFormatter()

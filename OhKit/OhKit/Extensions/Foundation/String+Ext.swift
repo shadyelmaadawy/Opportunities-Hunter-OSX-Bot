@@ -14,17 +14,13 @@ internal extension String {
     }
     
     @discardableResult
-    func buildFromIdxs(_ startIdx: Int, _ endIdx: Int, _ replaceString: String?) -> String {
+    func buildFromIdxs(_ startIdx: Int, _ endIdx: Int) -> String {
         var textBuffer = String.init()
 
         for i in (startIdx...(endIdx - 1)) {
             textBuffer.append(self[i])
         }
         
-        guard let replaceString = replaceString else {
-            return textBuffer
-        }
-        textBuffer.append(replaceString)
         return textBuffer
     }
     

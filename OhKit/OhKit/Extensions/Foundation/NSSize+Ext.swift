@@ -9,6 +9,7 @@ import Foundation
 
 internal extension NSSize {
     
+    /// Minimum rect size of window
     static var minimumRect: CGSize {
         return CGSize.init(
             width: 876.00,

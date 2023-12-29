@@ -9,9 +9,16 @@ import AppKit
 
 public class OhScrollableTextView: OhScrollView {
 
+    // MARK: - Enums
+    
+    internal enum SuffixTypes: String {
+        case newLine = "\n"
+        case whiteSpace = " "
+    }
+    
     // MARK: - UI Components
     
-    internal lazy var textView: OhTextView = {
+    private lazy var textView: OhTextView = {
         let baseTextView = OhTextView.init()
         baseTextView.enableAutoResizingMask()
         return baseTextView
@@ -31,44 +38,6 @@ public class OhScrollableTextView: OhScrollView {
     
 }
 
-// MARK: - Operations
-
-public extension OhScrollableTextView {
-    
-    func appendText(_ textBuffer: NSAttributedString?) {
-        
-        guard let textBuffer = textBuffer else {
-            return
-        }
-        self.textView.textStorage?.append(textBuffer)
-
-    }
-    
-    
-    func appendChar(_ charColor: NSColor, _ char: Character) {
-
-        let logBuffer = NSMutableAttributedString.buildAttributedBuffer(
-            messagesBuffer: String(char),
-            colors: charColor,
-            withNewLine: false
-        )
-        DispatchQueue.main.sync { self.appendText(logBuffer) }
-
-    }
-    func appendSuffix(newLine: Bool = false) {
-        DispatchQueue.main.async { 
-            self.textView.textStorage?.append(
-                NSAttributedString.buildAttributedBuffer(messagesBuffer: newLine ? "" : " ", colors: .black, withNewLine: newLine)
-            )
-        }
-    }
-    
-    internal func setDelegates(_ delegates: TextViewDelegates) {
-        self.textView.textDelegates = delegates
-    }
-    
-}
-
 // MARK: - Configure
 
 private extension OhScrollableTextView {
@@ -78,6 +47,49 @@ private extension OhScrollableTextView {
         self.clipView.documentView = textView
         self.contentView = clipView
 
+        
     }
     
+}
+
+// MARK: - Operations
+
+internal extension OhScrollableTextView {
+    
+    /// Append NSAttributedString to textview in main thread
+    /// - Parameter textBuffer: required NSAttributedString
+    func appendMessage(_ textBuffer: NSAttributedString) {
+        DispatchQueue.main.async {
+            
+            self.textView.textStorage?.append(textBuffer)
+            self.textView.scrollToEndOfDocument(nil)
+
+        }
+    }
+    
+    /// Add a suffix ( New line or Whitespace ) to textView
+    /// - Parameter suffix: required suffix
+    func appendSuffix(_ suffix: SuffixTypes) {
+        
+        // Check if the textview have previous value or not, to prevent add first line without needed
+        DispatchQueue.main.sync {
+            guard self.textView.textStorage?.string.isEmpty == false else {
+                return
+            }
+            let textSuffix = NSAttributedString.buildAttributedBuffer(messagesBuffer: suffix.rawValue, colors: .black)
+            self.appendMessage(textSuffix)
+        }
+    }
+    
+    /// Set edit enable status to textview to
+    /// - Parameter value: required edit status
+    func setEditableValue(_ value: Bool) {
+        self.textView.isEditable = value
+    }
+    
+    /// Set stream events handler
+    /// - Parameter textEventsStream: An instance confirm to TextViewEvents Protocol
+    func setEventsStreamDestination(_ textEventsStream: TextViewEvents) {
+        self.textView.textViewEvents = textEventsStream
+    }
 }

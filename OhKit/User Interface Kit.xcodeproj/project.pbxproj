@@ -12,10 +12,14 @@
 		61A0C20B2B2FE6BC00B02EE2 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0C20A2B2FE6BC00B02EE2 /* Date+Ext.swift */; };
 		61A0C20D2B2FE70F00B02EE2 /* NSAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0C20C2B2FE70F00B02EE2 /* NSAttributedString+Ext.swift */; };
 		61A0C21C2B2FEE2600B02EE2 /* NSFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0C21B2B2FEE2600B02EE2 /* NSFont+Ext.swift */; };
-		61A0C21E2B30027100B02EE2 /* OhLogTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0C21D2B30027100B02EE2 /* OhLogTextView.swift */; };
 		61A753B22B2E739900540242 /* OhKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 61A753B12B2E739900540242 /* OhKit.docc */; };
 		61A753B32B2E739900540242 /* OhKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 61A753B02B2E739900540242 /* OhKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61A753C12B2E73D600540242 /* OhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A753C02B2E73D600540242 /* OhViewController.swift */; };
+		61A8BB2C2B3E71E1009433E5 /* LoggerMessageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8BB2B2B3E71E1009433E5 /* LoggerMessageProtocol.swift */; };
+		61A8BB332B3E7603009433E5 /* DefaultLoggerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8BB322B3E7603009433E5 /* DefaultLoggerMessage.swift */; };
+		61B964582B3E615B003871A8 /* OhLoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B964572B3E615B003871A8 /* OhLoggerView.swift */; };
+		61B9645A2B3E618B003871A8 /* OhLoggerView+Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B964592B3E618B003871A8 /* OhLoggerView+Listener.swift */; };
+		61B9645C2B3E620F003871A8 /* OhLoggerView+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9645B2B3E620F003871A8 /* OhLoggerView+Process.swift */; };
 		61C815F02B2FAF2C00A0FDE1 /* OhClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C815EF2B2FAF2C00A0FDE1 /* OhClipView.swift */; };
 		61C815F32B2FB9BE00A0FDE1 /* OhScrollableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */; };
 		61DF944E2B3CECC100C9ABBE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF944D2B3CECC100C9ABBE /* Queue.swift */; };
@@ -38,11 +42,15 @@
 		61A0C20A2B2FE6BC00B02EE2 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		61A0C20C2B2FE70F00B02EE2 /* NSAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Ext.swift"; sourceTree = "<group>"; };
 		61A0C21B2B2FEE2600B02EE2 /* NSFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont+Ext.swift"; sourceTree = "<group>"; };
-		61A0C21D2B30027100B02EE2 /* OhLogTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhLogTextView.swift; sourceTree = "<group>"; };
 		61A753AD2B2E739900540242 /* OhKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OhKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A753B02B2E739900540242 /* OhKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OhKit.h; sourceTree = "<group>"; };
 		61A753B12B2E739900540242 /* OhKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OhKit.docc; sourceTree = "<group>"; };
 		61A753C02B2E73D600540242 /* OhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhViewController.swift; sourceTree = "<group>"; };
+		61A8BB2B2B3E71E1009433E5 /* LoggerMessageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMessageProtocol.swift; sourceTree = "<group>"; };
+		61A8BB322B3E7603009433E5 /* DefaultLoggerMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoggerMessage.swift; sourceTree = "<group>"; };
+		61B964572B3E615B003871A8 /* OhLoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhLoggerView.swift; sourceTree = "<group>"; };
+		61B964592B3E618B003871A8 /* OhLoggerView+Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OhLoggerView+Listener.swift"; sourceTree = "<group>"; };
+		61B9645B2B3E620F003871A8 /* OhLoggerView+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OhLoggerView+Process.swift"; sourceTree = "<group>"; };
 		61C815EF2B2FAF2C00A0FDE1 /* OhClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhClipView.swift; sourceTree = "<group>"; };
 		61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhScrollableTextView.swift; sourceTree = "<group>"; };
 		61DF944D2B3CECC100C9ABBE /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
@@ -123,11 +131,23 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		61B964562B3E614B003871A8 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				61B964572B3E615B003871A8 /* OhLoggerView.swift */,
+				61B964592B3E618B003871A8 /* OhLoggerView+Listener.swift */,
+				61B9645B2B3E620F003871A8 /* OhLoggerView+Process.swift */,
+				61A8BB2B2B3E71E1009433E5 /* LoggerMessageProtocol.swift */,
+				61A8BB322B3E7603009433E5 /* DefaultLoggerMessage.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
 		61C815F12B2FB9A400A0FDE1 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				61B964562B3E614B003871A8 /* Logger */,
 				61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */,
-				61A0C21D2B30027100B02EE2 /* OhLogTextView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -211,7 +231,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					61A753AC2B2E739900540242 = {
 						CreatedOnToolsVersion = 15.0;
@@ -257,22 +277,26 @@
 				61F6130B2B2EA234009485A5 /* NSSize+Ext.swift in Sources */,
 				61A0C20B2B2FE6BC00B02EE2 /* Date+Ext.swift in Sources */,
 				61F613072B2E9C1C009485A5 /* OhWindow.swift in Sources */,
+				61B9645C2B3E620F003871A8 /* OhLoggerView+Process.swift in Sources */,
 				61C815F32B2FB9BE00A0FDE1 /* OhScrollableTextView.swift in Sources */,
 				61A753B22B2E739900540242 /* OhKit.docc in Sources */,
+				61A8BB2C2B3E71E1009433E5 /* LoggerMessageProtocol.swift in Sources */,
 				61F612FF2B2E8BA0009485A5 /* OhVisualEffectView.swift in Sources */,
 				61F613032B2E983A009485A5 /* OhWindowController.swift in Sources */,
 				61DF94542B3D64D000C9ABBE /* String+Ext.swift in Sources */,
 				619C023E2B2F97B800736380 /* OhTextView.swift in Sources */,
+				61A8BB332B3E7603009433E5 /* DefaultLoggerMessage.swift in Sources */,
 				61DF94522B3D62E400C9ABBE /* NSObject+Ext.swift in Sources */,
 				61A0C21C2B2FEE2600B02EE2 /* NSFont+Ext.swift in Sources */,
-				61A0C21E2B30027100B02EE2 /* OhLogTextView.swift in Sources */,
 				61F612FD2B2E8B5B009485A5 /* NSView+Ext.swift in Sources */,
 				61C815F02B2FAF2C00A0FDE1 /* OhClipView.swift in Sources */,
+				61B9645A2B3E618B003871A8 /* OhLoggerView+Listener.swift in Sources */,
 				61A753C12B2E73D600540242 /* OhViewController.swift in Sources */,
 				61DF944E2B3CECC100C9ABBE /* Queue.swift in Sources */,
 				61E88D122B2F4674004751CD /* OhTextField.swift in Sources */,
 				61F613012B2E8FE7009485A5 /* OhView.swift in Sources */,
 				61F613052B2E9AFE009485A5 /* NSRect+Ext.swift in Sources */,
+				61B964582B3E615B003871A8 /* OhLoggerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +338,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -380,6 +405,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -409,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -440,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

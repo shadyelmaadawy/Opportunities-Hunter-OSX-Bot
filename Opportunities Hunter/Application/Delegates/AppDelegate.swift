@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
 
         windowController = OhWindowController.init()
-        windowController?.contentViewController = ViewController.init()
+        windowController?.contentViewController = BotLoggerViewController.init()
         windowController?.showWindow(self)
 
     }

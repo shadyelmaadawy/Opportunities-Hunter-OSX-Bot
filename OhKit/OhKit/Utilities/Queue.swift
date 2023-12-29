@@ -9,6 +9,8 @@ internal struct Queue<Element> {
     
     // MARK: - Properties
     
+    private let queueLock = NSLock()
+    
     private lazy var queueStorage: [Element] = {
         var baseQueue: [Element] = .init()
         baseQueue.reserveCapacity(16)

@@ -7,20 +7,28 @@
 
 import AppKit
 import Combine
-public protocol TextViewDelegates: AnyObject {
-    var textBuffer: CurrentValueSubject<String, Never> { get }
-    func userPressEnter()
+
+
+/// Stream Protocol of events
+public protocol TextViewEvents: AnyObject {
+    var userEnterEvent: PassthroughSubject<String, Never> { get }
 }
 
 public class OhTextView: NSTextView, NSTextViewDelegate {
 
     // MARK: - Properties
     
+    weak var textViewEvents: TextViewEvents?
+    
     private let _textStorage: NSTextStorage
     private let _layoutManager: NSLayoutManager
     private let _textContainer: NSTextContainer
     
+    /// Edit Location is the string count before enable edit mode
     private var editLocation: Int = -1
+    
+    // MARK: - View Properties
+    
     public override var isEditable: Bool {
         get {
             return super.isEditable
@@ -38,7 +46,6 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
             }
         }
     }
-    weak var textDelegates: TextViewDelegates?
     
     // MARK: - Initialization
     
@@ -49,12 +56,13 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
         _textContainer = NSTextContainer.init()
 
         _textStorage.addLayoutManager(_layoutManager)
-        
+
         _textContainer.widthTracksTextView = true
         _textContainer.heightTracksTextView = false
         _textContainer.lineBreakMode = .byWordWrapping
         
         _layoutManager.addTextContainer(_textContainer)
+
 
         super.init(
             frame: CGRect.init(
@@ -71,49 +79,41 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    	
-    public override func shouldChangeText(in affectedCharRange: NSRange, replacementString: String?) -> Bool {
-        if(
-            self.editLocation > 0 && (
-                affectedCharRange.location <= self.string.count &&
-                affectedCharRange.location >= self.editLocation
-            ) && replacementString?.count == 0) {
-            
-            // MARK: - Refactor this part later
-            
-            return true
-            
-        } else if (self.editLocation > 0 && affectedCharRange.location < self.editLocation) {
-        
-            return false
-            
-        } else {
-            
-            guard let replacementString = replacementString, replacementString.count > 0 else {
-                return true
-            }
-            
-            if(self.editLocation == affectedCharRange.location) {
-                
-                self.textDelegates?.textBuffer.value = replacementString
-                
-            } else {
+    
+}
 
-                self.textDelegates?.textBuffer.value = self.string.buildFromIdxs(self.editLocation, self.string.count, replacementString)
-                
-            }
+// MARK: - View Life Cycle
+
+extension OhTextView {
+    
+    /// Override should change text function to prevent user from remove or change any inputs on text view
+    public override func shouldChangeText(in affectedCharRange: NSRange, replacementString: String?) -> Bool {
+        if(self.editLocation > 0 && (
+            affectedCharRange.location <= self.string.count &&
+            affectedCharRange.location >= self.editLocation
+        )) {
+            
             return true
         }
-
+        
+        return false
     }
     
+    /// Override do command function to handle enter/delete/backspace events
     public override func doCommand(by selector: Selector) {
         
         if (selector == #selector(insertNewline(_:))) {
-            textDelegates?.userPressEnter()
+            
+            guard self.editLocation > 0, self.editLocation < self.string.count else {
+                return
+            }
+            self.isEditable = false
+            
+            let textBuffer = self.string.buildFromIdxs(self.editLocation, self.string.count)
+            self.textViewEvents?.userEnterEvent.send(textBuffer)
             
         } else if(selector == #selector(deleteBackward(_:)) || selector == #selector(deleteForward(_:))) {
-        
+            
             super.doCommand(by: #selector(deleteBackward(_:)))
             
         } else {
@@ -122,6 +122,7 @@ public class OhTextView: NSTextView, NSTextViewDelegate {
             
         }
     }
+
 }
 
 // MARK: - Configure

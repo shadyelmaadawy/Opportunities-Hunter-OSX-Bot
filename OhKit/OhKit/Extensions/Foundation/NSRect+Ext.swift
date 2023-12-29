@@ -9,6 +9,7 @@ import Foundation
 
 internal extension NSRect {
 
+    /// Default rect of window
     static var defaultRect: NSRect {
         return NSMakeRect(
             130,

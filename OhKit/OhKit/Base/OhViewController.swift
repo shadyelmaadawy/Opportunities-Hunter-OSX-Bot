@@ -26,6 +26,13 @@ open class OhViewController: NSViewController {
         self.view = OhVisualEffectView.init()
     }
     
+    // MARK: - Object Life Cycle;
+    
+    deinit {
+        subscriptions.forEach({$0.cancel()})
+        subscriptions.removeAll()
+    }
+    
     // MARK: - Operations
     
     public func activeLayoutConstraints(_ constraints: [NSLayoutConstraint]) {

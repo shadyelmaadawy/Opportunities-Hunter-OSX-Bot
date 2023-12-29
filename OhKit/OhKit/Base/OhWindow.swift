@@ -35,7 +35,7 @@ private extension OhWindow {
         self.titlebarSeparatorStyle = .line
         self.titlebarAppearsTransparent = true
         
-        self.appearance = NSAppearance.init(named: NSAppearance.Name.vibrantDark)
+        self.appearance = NSAppearance.init(named: NSAppearance.Name.darkAqua)
 
 
     }
