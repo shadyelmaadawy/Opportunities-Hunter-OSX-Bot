@@ -47,7 +47,7 @@ class ViewController: NSViewController {
         }
 
         resultTextField.stringValue = "Are you IOS Developer? \(checkResult.label)"
-        if(checkResult.label == "Yes") {
+        if(checkResult.label == "yes") {
             resultTextField.textColor = .systemBlue
         } else {
             resultTextField.textColor = .systemRed
