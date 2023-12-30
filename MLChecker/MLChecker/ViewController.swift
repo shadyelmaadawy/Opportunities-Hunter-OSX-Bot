@@ -40,7 +40,7 @@ class ViewController: NSViewController {
             return
         }
         
-        let jobInput = AreYouIOSDevInput(text: jobBuffer)
+        let jobInput = AreYouIOSDevInput(text: jobBuffer.lowercased())
         
         guard let checkResult = try? jobModel.prediction(input: jobInput) else {
             return
