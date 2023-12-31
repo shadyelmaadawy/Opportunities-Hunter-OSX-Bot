@@ -17,12 +17,13 @@
 		61A753C12B2E73D600540242 /* OhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A753C02B2E73D600540242 /* OhViewController.swift */; };
 		61A8BB2C2B3E71E1009433E5 /* LoggerMessageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8BB2B2B3E71E1009433E5 /* LoggerMessageProtocol.swift */; };
 		61A8BB332B3E7603009433E5 /* DefaultLoggerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8BB322B3E7603009433E5 /* DefaultLoggerMessage.swift */; };
+		61B92B532B41601700987305 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B92B522B41601700987305 /* Utilities.framework */; };
+		61B92B542B41601700987305 /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61B92B522B41601700987305 /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61B964582B3E615B003871A8 /* OhLoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B964572B3E615B003871A8 /* OhLoggerView.swift */; };
 		61B9645A2B3E618B003871A8 /* OhLoggerView+Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B964592B3E618B003871A8 /* OhLoggerView+Listener.swift */; };
 		61B9645C2B3E620F003871A8 /* OhLoggerView+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9645B2B3E620F003871A8 /* OhLoggerView+Process.swift */; };
 		61C815F02B2FAF2C00A0FDE1 /* OhClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C815EF2B2FAF2C00A0FDE1 /* OhClipView.swift */; };
 		61C815F32B2FB9BE00A0FDE1 /* OhScrollableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */; };
-		61DF944E2B3CECC100C9ABBE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF944D2B3CECC100C9ABBE /* Queue.swift */; };
 		61DF94522B3D62E400C9ABBE /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF94512B3D62E400C9ABBE /* NSObject+Ext.swift */; };
 		61DF94542B3D64D000C9ABBE /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DF94532B3D64D000C9ABBE /* String+Ext.swift */; };
 		61E88D122B2F4674004751CD /* OhTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E88D112B2F4674004751CD /* OhTextField.swift */; };
@@ -36,6 +37,20 @@
 		61F6130D2B2EA254009485A5 /* NSWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6130C2B2EA254009485A5 /* NSWindow+Ext.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		61B92B552B41601700987305 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				61B92B542B41601700987305 /* Utilities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		619C023D2B2F97B800736380 /* OhTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhTextView.swift; sourceTree = "<group>"; };
 		619C023F2B2F9F6200736380 /* OhScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhScrollView.swift; sourceTree = "<group>"; };
@@ -48,12 +63,12 @@
 		61A753C02B2E73D600540242 /* OhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhViewController.swift; sourceTree = "<group>"; };
 		61A8BB2B2B3E71E1009433E5 /* LoggerMessageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMessageProtocol.swift; sourceTree = "<group>"; };
 		61A8BB322B3E7603009433E5 /* DefaultLoggerMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoggerMessage.swift; sourceTree = "<group>"; };
+		61B92B522B41601700987305 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B964572B3E615B003871A8 /* OhLoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhLoggerView.swift; sourceTree = "<group>"; };
 		61B964592B3E618B003871A8 /* OhLoggerView+Listener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OhLoggerView+Listener.swift"; sourceTree = "<group>"; };
 		61B9645B2B3E620F003871A8 /* OhLoggerView+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OhLoggerView+Process.swift"; sourceTree = "<group>"; };
 		61C815EF2B2FAF2C00A0FDE1 /* OhClipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhClipView.swift; sourceTree = "<group>"; };
 		61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhScrollableTextView.swift; sourceTree = "<group>"; };
-		61DF944D2B3CECC100C9ABBE /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		61DF94512B3D62E400C9ABBE /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
 		61DF94532B3D64D000C9ABBE /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		61E88D112B2F4674004751CD /* OhTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhTextField.swift; sourceTree = "<group>"; };
@@ -72,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B92B532B41601700987305 /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +99,7 @@
 			children = (
 				61A753AF2B2E739900540242 /* OhKit */,
 				61A753AE2B2E739900540242 /* Products */,
+				61B92B512B41601700987305 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,7 +114,6 @@
 		61A753AF2B2E739900540242 /* OhKit */ = {
 			isa = PBXGroup;
 			children = (
-				61DF944C2B3CECA800C9ABBE /* Utilities */,
 				61C815F12B2FB9A400A0FDE1 /* Custom */,
 				61A753C72B2E748A00540242 /* Base */,
 				61A753C82B2E749000540242 /* Configuration */,
@@ -131,6 +147,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		61B92B512B41601700987305 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61B92B522B41601700987305 /* Utilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61B964562B3E614B003871A8 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,14 +174,6 @@
 				61C815F22B2FB9BE00A0FDE1 /* OhScrollableTextView.swift */,
 			);
 			path = Custom;
-			sourceTree = "<group>";
-		};
-		61DF944C2B3CECA800C9ABBE /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				61DF944D2B3CECC100C9ABBE /* Queue.swift */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		61F612FB2B2E8B43009485A5 /* Extensions */ = {
@@ -214,6 +230,7 @@
 				61A753A92B2E739900540242 /* Sources */,
 				61A753AA2B2E739900540242 /* Frameworks */,
 				61A753AB2B2E739900540242 /* Resources */,
+				61B92B552B41601700987305 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,7 +309,6 @@
 				61C815F02B2FAF2C00A0FDE1 /* OhClipView.swift in Sources */,
 				61B9645A2B3E618B003871A8 /* OhLoggerView+Listener.swift in Sources */,
 				61A753C12B2E73D600540242 /* OhViewController.swift in Sources */,
-				61DF944E2B3CECC100C9ABBE /* Queue.swift in Sources */,
 				61E88D122B2F4674004751CD /* OhTextField.swift in Sources */,
 				61F613012B2E8FE7009485A5 /* OhView.swift in Sources */,
 				61F613052B2E9AFE009485A5 /* NSRect+Ext.swift in Sources */,

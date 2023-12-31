@@ -1,15 +1,15 @@
 //
 //  Queue.swift
-//  OhKit
+//  Utilities
 //
-//  Created by Shady El-Maadawy on 28/12/2023.
+//  Created by Shady El-Maadawy on 31/12/2023.
 //
 
-internal struct Queue<Element> {
+import Foundation
+
+public struct Queue<Element> {
     
     // MARK: - Properties
-    
-    private let queueLock = NSLock()
     
     private lazy var queueStorage: [Element] = {
         var baseQueue: [Element] = .init()
@@ -17,18 +17,21 @@ internal struct Queue<Element> {
         return baseQueue
     }()
     
+    // MARK: - Initialization
+    
+    public init() {}
 }
 
 
 // MARK: - Operations
 
-extension Queue {
+public extension Queue {
 
     mutating func isEmpty() -> Bool {
         return self.peek() == nil
     }
     
-    mutating func enqueue(_ element: Element) {
+     mutating func enqueue(_ element: Element) {
         queueStorage.append(element)
     }
     
@@ -38,7 +41,7 @@ extension Queue {
     }
     
     mutating func peek() -> Element? {
-        return queueStorage.last
+        return queueStorage.first
     }
 
 

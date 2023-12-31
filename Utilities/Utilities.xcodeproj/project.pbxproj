@@ -7,193 +7,113 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		61B92AE82B40E56100987305 /* OrcaEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 61B92AE72B40E56100987305 /* OrcaEngine.docc */; };
-		61B92AE92B40E56100987305 /* OrcaEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92AE62B40E56100987305 /* OrcaEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61B92AFA2B41217C00987305 /* OrcaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92AF92B41217C00987305 /* OrcaModel.swift */; };
-		61B92B062B413F7900987305 /* OrcaEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92B052B413F7900987305 /* OrcaEngine.swift */; };
-		61B92B0B2B415A5200987305 /* MLTrainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92B0A2B415A5200987305 /* MLTrainService.swift */; };
-		61B92B0D2B415AC500987305 /* MLQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92B0C2B415AC500987305 /* MLQueryService.swift */; };
-		61B92B0F2B415AEA00987305 /* URL+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92B0E2B415AEA00987305 /* URL+Ext.swift */; };
-		61B92B122B415D9800987305 /* MLQueryServiceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92B112B415D9800987305 /* MLQueryServiceConfigurator.swift */; };
-		61B92B4E2B41600700987305 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B92B4D2B41600700987305 /* Utilities.framework */; };
-		61B92B4F2B41600700987305 /* Utilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61B92B4D2B41600700987305 /* Utilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61B92B3E2B415F5500987305 /* Utilities.docc in Sources */ = {isa = PBXBuildFile; fileRef = 61B92B3D2B415F5500987305 /* Utilities.docc */; };
+		61B92B3F2B415F5500987305 /* Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92B3C2B415F5500987305 /* Utilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61B92B472B415F6C00987305 /* JsonEncoderEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92B462B415F6C00987305 /* JsonEncoderEngine.swift */; };
+		61B92B4B2B415FB200987305 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92B4A2B415FB200987305 /* Queue.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		61B92B502B41600700987305 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				61B92B4F2B41600700987305 /* Utilities.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		61B92AE32B40E56100987305 /* OrcaEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OrcaEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61B92AE62B40E56100987305 /* OrcaEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrcaEngine.h; sourceTree = "<group>"; };
-		61B92AE72B40E56100987305 /* OrcaEngine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OrcaEngine.docc; sourceTree = "<group>"; };
-		61B92AF92B41217C00987305 /* OrcaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaModel.swift; sourceTree = "<group>"; };
-		61B92B052B413F7900987305 /* OrcaEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaEngine.swift; sourceTree = "<group>"; };
-		61B92B0A2B415A5200987305 /* MLTrainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLTrainService.swift; sourceTree = "<group>"; };
-		61B92B0C2B415AC500987305 /* MLQueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLQueryService.swift; sourceTree = "<group>"; };
-		61B92B0E2B415AEA00987305 /* URL+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Ext.swift"; sourceTree = "<group>"; };
-		61B92B112B415D9800987305 /* MLQueryServiceConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLQueryServiceConfigurator.swift; sourceTree = "<group>"; };
-		61B92B4D2B41600700987305 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61B92B392B415F5500987305 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61B92B3C2B415F5500987305 /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		61B92B3D2B415F5500987305 /* Utilities.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Utilities.docc; sourceTree = "<group>"; };
+		61B92B462B415F6C00987305 /* JsonEncoderEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonEncoderEngine.swift; sourceTree = "<group>"; };
+		61B92B4A2B415FB200987305 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		61B92AE02B40E56100987305 /* Frameworks */ = {
+		61B92B362B415F5500987305 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B92B4E2B41600700987305 /* Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		61B92AD92B40E56100987305 = {
+		61B92B2F2B415F5500987305 = {
 			isa = PBXGroup;
 			children = (
-				61B92AE52B40E56100987305 /* OrcaEngine */,
-				61B92AE42B40E56100987305 /* Products */,
-				61B92B4C2B41600600987305 /* Frameworks */,
+				61B92B452B415F5F00987305 /* Configuration */,
+				61B92B3B2B415F5500987305 /* Utilities */,
+				61B92B3A2B415F5500987305 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		61B92AE42B40E56100987305 /* Products */ = {
+		61B92B3A2B415F5500987305 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61B92AE32B40E56100987305 /* OrcaEngine.framework */,
+				61B92B392B415F5500987305 /* Utilities.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		61B92AE52B40E56100987305 /* OrcaEngine */ = {
+		61B92B3B2B415F5500987305 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				61B92AF02B40E58100987305 /* Base */,
-				61B92AEF2B40E57600987305 /* Configuration */,
-				61B92AFB2B41229600987305 /* Core */,
-				61B92B042B413B1600987305 /* Engines */,
-				61B92B012B413A0E00987305 /* Services */,
+				61B92B462B415F6C00987305 /* JsonEncoderEngine.swift */,
+				61B92B4A2B415FB200987305 /* Queue.swift */,
 			);
-			path = OrcaEngine;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
-		61B92AEF2B40E57600987305 /* Configuration */ = {
+		61B92B452B415F5F00987305 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				61B92AE62B40E56100987305 /* OrcaEngine.h */,
-				61B92AE72B40E56100987305 /* OrcaEngine.docc */,
+				61B92B3C2B415F5500987305 /* Utilities.h */,
+				61B92B3D2B415F5500987305 /* Utilities.docc */,
 			);
 			path = Configuration;
-			sourceTree = "<group>";
-		};
-		61B92AF02B40E58100987305 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				61B92AF92B41217C00987305 /* OrcaModel.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		61B92AFB2B41229600987305 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				61B92B0E2B415AEA00987305 /* URL+Ext.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		61B92B012B413A0E00987305 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				61B92B102B415D8D00987305 /* Query */,
-				61B92B0A2B415A5200987305 /* MLTrainService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		61B92B042B413B1600987305 /* Engines */ = {
-			isa = PBXGroup;
-			children = (
-				61B92B052B413F7900987305 /* OrcaEngine.swift */,
-			);
-			path = Engines;
-			sourceTree = "<group>";
-		};
-		61B92B102B415D8D00987305 /* Query */ = {
-			isa = PBXGroup;
-			children = (
-				61B92B0C2B415AC500987305 /* MLQueryService.swift */,
-				61B92B112B415D9800987305 /* MLQueryServiceConfigurator.swift */,
-			);
-			path = Query;
-			sourceTree = "<group>";
-		};
-		61B92B4C2B41600600987305 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				61B92B4D2B41600700987305 /* Utilities.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		61B92ADE2B40E56100987305 /* Headers */ = {
+		61B92B342B415F5500987305 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B92AE92B40E56100987305 /* OrcaEngine.h in Headers */,
+				61B92B3F2B415F5500987305 /* Utilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		61B92AE22B40E56100987305 /* OrcaEngine */ = {
+		61B92B382B415F5500987305 /* Utilities */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61B92AEC2B40E56100987305 /* Build configuration list for PBXNativeTarget "OrcaEngine" */;
+			buildConfigurationList = 61B92B422B415F5500987305 /* Build configuration list for PBXNativeTarget "Utilities" */;
 			buildPhases = (
-				61B92ADE2B40E56100987305 /* Headers */,
-				61B92ADF2B40E56100987305 /* Sources */,
-				61B92AE02B40E56100987305 /* Frameworks */,
-				61B92AE12B40E56100987305 /* Resources */,
-				61B92B502B41600700987305 /* Embed Frameworks */,
+				61B92B342B415F5500987305 /* Headers */,
+				61B92B352B415F5500987305 /* Sources */,
+				61B92B362B415F5500987305 /* Frameworks */,
+				61B92B372B415F5500987305 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OrcaEngine;
-			productName = OrcaEngine;
-			productReference = 61B92AE32B40E56100987305 /* OrcaEngine.framework */;
+			name = Utilities;
+			productName = Utilities;
+			productReference = 61B92B392B415F5500987305 /* Utilities.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		61B92ADA2B40E56100987305 /* Project object */ = {
+		61B92B302B415F5500987305 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					61B92AE22B40E56100987305 = {
+					61B92B382B415F5500987305 = {
 						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
-			buildConfigurationList = 61B92ADD2B40E56100987305 /* Build configuration list for PBXProject "Orca Engine" */;
+			buildConfigurationList = 61B92B332B415F5500987305 /* Build configuration list for PBXProject "Utilities" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -201,18 +121,18 @@
 				en,
 				Base,
 			);
-			mainGroup = 61B92AD92B40E56100987305;
-			productRefGroup = 61B92AE42B40E56100987305 /* Products */;
+			mainGroup = 61B92B2F2B415F5500987305;
+			productRefGroup = 61B92B3A2B415F5500987305 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				61B92AE22B40E56100987305 /* OrcaEngine */,
+				61B92B382B415F5500987305 /* Utilities */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		61B92AE12B40E56100987305 /* Resources */ = {
+		61B92B372B415F5500987305 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,24 +142,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		61B92ADF2B40E56100987305 /* Sources */ = {
+		61B92B352B415F5500987305 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B92AFA2B41217C00987305 /* OrcaModel.swift in Sources */,
-				61B92B0B2B415A5200987305 /* MLTrainService.swift in Sources */,
-				61B92AE82B40E56100987305 /* OrcaEngine.docc in Sources */,
-				61B92B0D2B415AC500987305 /* MLQueryService.swift in Sources */,
-				61B92B122B415D9800987305 /* MLQueryServiceConfigurator.swift in Sources */,
-				61B92B062B413F7900987305 /* OrcaEngine.swift in Sources */,
-				61B92B0F2B415AEA00987305 /* URL+Ext.swift in Sources */,
+				61B92B472B415F6C00987305 /* JsonEncoderEngine.swift in Sources */,
+				61B92B4B2B415FB200987305 /* Queue.swift in Sources */,
+				61B92B3E2B415F5500987305 /* Utilities.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		61B92AEA2B40E56100987305 /* Debug */ = {
+		61B92B402B415F5500987305 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -293,7 +209,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -305,7 +221,7 @@
 			};
 			name = Debug;
 		};
-		61B92AEB2B40E56100987305 /* Release */ = {
+		61B92B412B415F5500987305 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -353,7 +269,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -363,7 +279,7 @@
 			};
 			name = Release;
 		};
-		61B92AED2B40E56100987305 /* Debug */ = {
+		61B92B432B415F5500987305 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -383,11 +299,10 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = shadudiix.com.OrcaEngine;
+				PRODUCT_BUNDLE_IDENTIFIER = shadudiix.com.Utilities;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -395,7 +310,7 @@
 			};
 			name = Debug;
 		};
-		61B92AEE2B40E56100987305 /* Release */ = {
+		61B92B442B415F5500987305 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -415,11 +330,10 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = shadudiix.com.OrcaEngine;
+				PRODUCT_BUNDLE_IDENTIFIER = shadudiix.com.Utilities;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -430,25 +344,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		61B92ADD2B40E56100987305 /* Build configuration list for PBXProject "Orca Engine" */ = {
+		61B92B332B415F5500987305 /* Build configuration list for PBXProject "Utilities" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				61B92AEA2B40E56100987305 /* Debug */,
-				61B92AEB2B40E56100987305 /* Release */,
+				61B92B402B415F5500987305 /* Debug */,
+				61B92B412B415F5500987305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61B92AEC2B40E56100987305 /* Build configuration list for PBXNativeTarget "OrcaEngine" */ = {
+		61B92B422B415F5500987305 /* Build configuration list for PBXNativeTarget "Utilities" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				61B92AED2B40E56100987305 /* Debug */,
-				61B92AEE2B40E56100987305 /* Release */,
+				61B92B432B415F5500987305 /* Debug */,
+				61B92B442B415F5500987305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 61B92ADA2B40E56100987305 /* Project object */;
+	rootObject = 61B92B302B415F5500987305 /* Project object */;
 }

@@ -21,6 +21,8 @@
 		61A753EB2B2E768400540242 /* NetworkEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61A753E92B2E768400540242 /* NetworkEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61A8BB2F2B3E7251009433E5 /* BotLoggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8BB2E2B3E7251009433E5 /* BotLoggerViewController.swift */; };
 		61A8BB382B3EC58F009433E5 /* BotMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8BB372B3EC58F009433E5 /* BotMessageModel.swift */; };
+		61B92AFF2B4126A500987305 /* OrcaEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B92AFE2B4126A500987305 /* OrcaEngine.framework */; };
+		61B92B002B4126A500987305 /* OrcaEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61B92AFE2B4126A500987305 /* OrcaEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		61F6130F2B2EAC8D009485A5 /* OpportunitiesHunter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6130E2B2EAC8D009485A5 /* OpportunitiesHunter.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				61B92B002B4126A500987305 /* OrcaEngine.framework in Embed Frameworks */,
 				61A753C62B2E743B00540242 /* OhKit.framework in Embed Frameworks */,
 				61A753EB2B2E768400540242 /* NetworkEngine.framework in Embed Frameworks */,
 			);
@@ -55,6 +58,7 @@
 		61A753E92B2E768400540242 /* NetworkEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A8BB2E2B3E7251009433E5 /* BotLoggerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotLoggerViewController.swift; sourceTree = "<group>"; };
 		61A8BB372B3EC58F009433E5 /* BotMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotMessageModel.swift; sourceTree = "<group>"; };
+		61B92AFE2B4126A500987305 /* OrcaEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OrcaEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F6130E2B2EAC8D009485A5 /* OpportunitiesHunter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunitiesHunter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B92AFF2B4126A500987305 /* OrcaEngine.framework in Frameworks */,
 				61A753C52B2E743B00540242 /* OhKit.framework in Frameworks */,
 				61A753EA2B2E768400540242 /* NetworkEngine.framework in Frameworks */,
 			);
@@ -116,6 +121,7 @@
 		61A753C32B2E743B00540242 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61B92AFE2B4126A500987305 /* OrcaEngine.framework */,
 				61A753E92B2E768400540242 /* NetworkEngine.framework */,
 				61A753C42B2E743B00540242 /* OhKit.framework */,
 			);
