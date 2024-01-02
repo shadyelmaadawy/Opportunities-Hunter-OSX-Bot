@@ -13,6 +13,8 @@ public class OrcaEngine {
     
     private let trainService: MLTrainService
     
+    private let extractService: ExtractKeyWordsService
+    
     private lazy var queryService: MLQueryService = {
        return MLQueryServiceConfigurator.configurator()
     }()
@@ -21,25 +23,35 @@ public class OrcaEngine {
     
     public init() {
         self.trainService = MLTrainService.init()
+        self.extractService = ExtractKeyWordsService.init()
         
     }
 }
 
 // MARK: - Operations
 
-extension OrcaEngine {
+public extension OrcaEngine {
     
     /// Train AI Model with new data
     /// - Parameter requiredBuffer: new data that will train model with
-    public func train(_ requiredBuffer: [OrcaModel]) throws {
+    func train(_ requiredBuffer: [OrcaModel]) throws {
         try trainService.trainModel(requiredBuffer)
     }
     
     /// Query about value
     /// - Parameter value: required text
     /// - Returns: True of false
-    public func query(_ value: String) throws -> Bool {
+    func query(_ value: String) throws -> Bool {
         return queryService.query(value)
     }
 
+    /// Extract keywords from a text string
+    /// - Parameters:
+    ///   - stringBuffer: required string that will be extract keywords from it
+    ///   - isSuitable: status of opportunity if it suitable or not
+    /// - Returns: Set with keywords
+    
+    func extractKeywords(_ stringBuffer: String, isSuitable: Bool) -> Set<OrcaKeyword> {
+        return extractService.extractKeyWords(stringBuffer, isSuitable: isSuitable)
+    }
 }

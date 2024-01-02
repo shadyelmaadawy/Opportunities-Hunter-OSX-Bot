@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61035DA62B43BA3E004B2A3B /* OrcaKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61035DA52B43BA3E004B2A3B /* OrcaKeyword.swift */; };
+		61035DA82B43BB16004B2A3B /* ExtractKeyWordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61035DA72B43BB16004B2A3B /* ExtractKeyWordsService.swift */; };
 		61B92AE82B40E56100987305 /* OrcaEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 61B92AE72B40E56100987305 /* OrcaEngine.docc */; };
 		61B92AE92B40E56100987305 /* OrcaEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92AE62B40E56100987305 /* OrcaEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61B92AFA2B41217C00987305 /* OrcaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92AF92B41217C00987305 /* OrcaModel.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		61035DA52B43BA3E004B2A3B /* OrcaKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaKeyword.swift; sourceTree = "<group>"; };
+		61035DA72B43BB16004B2A3B /* ExtractKeyWordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractKeyWordsService.swift; sourceTree = "<group>"; };
 		61B92AE32B40E56100987305 /* OrcaEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OrcaEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B92AE62B40E56100987305 /* OrcaEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrcaEngine.h; sourceTree = "<group>"; };
 		61B92AE72B40E56100987305 /* OrcaEngine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OrcaEngine.docc; sourceTree = "<group>"; };
@@ -91,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				61B92AE62B40E56100987305 /* OrcaEngine.h */,
-				61B92AE72B40E56100987305 /* OrcaEngine.docc */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -100,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				61B92AF92B41217C00987305 /* OrcaModel.swift */,
+				61035DA52B43BA3E004B2A3B /* OrcaKeyword.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -117,6 +121,7 @@
 			children = (
 				61B92B102B415D8D00987305 /* Query */,
 				61B92B0A2B415A5200987305 /* MLTrainService.swift */,
+				61035DA72B43BB16004B2A3B /* ExtractKeyWordsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		61B92B042B413B1600987305 /* Engines */ = {
 			isa = PBXGroup;
 			children = (
+				61B92AE72B40E56100987305 /* OrcaEngine.docc */,
 				61B92B052B413F7900987305 /* OrcaEngine.swift */,
 			);
 			path = Engines;
@@ -232,6 +238,8 @@
 				61B92B0D2B415AC500987305 /* MLQueryService.swift in Sources */,
 				61B92B122B415D9800987305 /* MLQueryServiceConfigurator.swift in Sources */,
 				61B92B062B413F7900987305 /* OrcaEngine.swift in Sources */,
+				61035DA62B43BA3E004B2A3B /* OrcaKeyword.swift in Sources */,
+				61035DA82B43BB16004B2A3B /* ExtractKeyWordsService.swift in Sources */,
 				61B92B0F2B415AEA00987305 /* URL+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +301,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -353,7 +361,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

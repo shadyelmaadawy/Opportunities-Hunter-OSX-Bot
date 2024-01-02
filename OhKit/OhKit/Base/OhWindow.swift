@@ -29,7 +29,7 @@ private extension OhWindow {
     
     private func configure() {
         
-        self.title = "Opportunities Hunter OSX-Bot;"
+        self.title = "Orca Opportunities Hunter OSX-Bot;"
         self.minSize = .minimumRect
 
         self.titlebarSeparatorStyle = .line

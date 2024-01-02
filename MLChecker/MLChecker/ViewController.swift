@@ -7,6 +7,7 @@
 
 import Cocoa
 import CoreML
+import OrcaEngine
 class ViewController: NSViewController {
 
     @IBOutlet var jobTextField: NSTextView!
@@ -29,29 +30,40 @@ class ViewController: NSViewController {
 
     @IBAction func checkClick(_ sender: Any) {
         
-        guard let jobBuffer = jobTextField.textStorage?.string else {
-            return
-        }
-        
-        let jobModel = try? AreYouIOSDev.init(
-            configuration: .init()
-        )
-        guard let jobModel = jobModel else {
-            return
-        }
-        
-        let jobInput = AreYouIOSDevInput(text: jobBuffer.lowercased())
-        
-        guard let checkResult = try? jobModel.prediction(input: jobInput) else {
-            return
-        }
+                guard let jobBuffer = jobTextField.textStorage?.string else {
+                    return
+                }
 
-        resultTextField.stringValue = "Are you IOS Developer? \(checkResult.label)"
-        if(checkResult.label == "yes") {
-            resultTextField.textColor = .systemBlue
-        } else {
-            resultTextField.textColor = .systemRed
-        }
+        OrcaEngine.init().extractKeywords(
+            jobBuffer,
+            isSuitable: true
+        ).forEach({ value in
+            print(value.keywordValue)
+        })
+        //
+//        guard let jobBuffer = jobTextField.textStorage?.string else {
+//            return
+//        }
+//        
+//        let jobModel = try? AreYouIOSDev.init(
+//            configuration: .init()
+//        )
+//        guard let jobModel = jobModel else {
+//            return
+//        }
+//        
+//        let jobInput = AreYouIOSDevInput(text: jobBuffer.lowercased())
+//        
+//        guard let checkResult = try? jobModel.prediction(input: jobInput) else {
+//            return
+//        }
+//
+//        resultTextField.stringValue = "Are you IOS Developer? \(checkResult.label)"
+//        if(checkResult.label == "yes") {
+//            resultTextField.textColor = .systemBlue
+//        } else {
+//            resultTextField.textColor = .systemRed
+//        }
         
     }
 }

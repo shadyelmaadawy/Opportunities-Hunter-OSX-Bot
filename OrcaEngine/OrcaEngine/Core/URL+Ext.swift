@@ -11,7 +11,7 @@ internal extension URL {
     
     /// Default Model Path
     static var modelURL: URL {
-        let currentDirectoryPath = URL.desktopDirectory
+        let currentDirectoryPath = URL.documentsDirectory
         let orcaModelPath = currentDirectoryPath.appendingPathComponent("Orca.mlmodel")
         return orcaModelPath
     }
