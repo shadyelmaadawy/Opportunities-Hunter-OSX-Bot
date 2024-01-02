@@ -719,12 +719,55 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="6Ad-nG-VPh">
-                                            <rect key="frame" x="0.0" y="0.0" width="425" height="123"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="425" height="700"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="425" height="123"/>
                                             <size key="maxSize" width="440" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment>
+                                                    <mutableString key="content">About the job
+We are looking for an iOS developer responsible for the development and maintenance of applications aimed at a range of iOS devices including mobile phones. Your primary focus will be development of iOS applications and their integration with backend services. You will be working alongside other engineers and developers working on different layers of the infrastructure. Therefore, a commitment to collaborative problem solving, sophisticated design, and the creation of quality products is essential.
+
+
+Responsibilities:
+
+
+
+Build innovative product features. 
+Conduct code reviews to ensure a code of the highest quality.
+Unit-test code for robustness, including edge cases, usability, and general reliability.
+Take part in planning meetings with a truly agile team to break down user stories into technical tasks.
+Provide increasingly accurate estimations for the tasks to be done.
+Collaborate with other developers, product managers, designers, and QA engineers to deliver the best product possible.
+Continuously discover, evaluate, and implement new technologies to maximize development efficiency.
+
+
+Qualifications:
+
+
+
+Bachelor’s degree or higher in Computer Science or a related field.
+4-8 years of experience in the development of iOS apps that use web services (for example with REST and JSON).
+Experience with Swift and Plus Objective-C.
+Expert knowledge of the iOS SDK (UIKit, Storyboards, Core Animation, Core Data, Auto-layout).
+A strong understanding of design patterns.
+Extensive knowledge of Unit Testing frameworks, ideally some understanding of Automation testing.
+Knowledge about with newly release updates from Apple, Swift UI, Widgets, AppClips is a great addition.
+Have published one or more iOS apps in the app store.
+Knowledge about continuous integration systems.
+Expert knowledge of asynchronous programming (GCD, NSOperationQueue, Promises).
+Knowledge about different design architecture MVC, MVVM, MVP, VIPRE.
+Experience with git or other version control systems.
+Experience with dependency managers e.g: CocoaPods, Swift Package Manager, Carthage.</mutableString>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" usesAppearanceFont="YES"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>

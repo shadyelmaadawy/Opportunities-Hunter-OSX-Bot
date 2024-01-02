@@ -8,6 +8,8 @@
 import Cocoa
 import CoreML
 import OrcaEngine
+
+
 class ViewController: NSViewController {
 
     @IBOutlet var jobTextField: NSTextView!
@@ -28,17 +30,18 @@ class ViewController: NSViewController {
         }
     }
 
+    let engine = OrcaEngine.init()
     @IBAction func checkClick(_ sender: Any) {
         
                 guard let jobBuffer = jobTextField.textStorage?.string else {
                     return
                 }
 
-        OrcaEngine.init().extractKeywords(
+        engine.extractKeywords(
             jobBuffer,
             isSuitable: true
         ).forEach({ value in
-            print(value.keywordValue)
+            print("Keyword: \(value.keywordValue)")
         })
         //
 //        guard let jobBuffer = jobTextField.textStorage?.string else {

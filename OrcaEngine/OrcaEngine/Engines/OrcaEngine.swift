@@ -45,7 +45,7 @@ public extension OrcaEngine {
         return queryService.query(value)
     }
 
-    /// Extract keywords from a text string
+    /// Extract keywords from a text string, extracted words will be based on Natural Language Analysis, As Example: IOS, Core Animation.. etc, there is no extract from web-sources.
     /// - Parameters:
     ///   - stringBuffer: required string that will be extract keywords from it
     ///   - isSuitable: status of opportunity if it suitable or not

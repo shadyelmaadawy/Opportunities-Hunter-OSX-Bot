@@ -9,7 +9,7 @@ import Foundation
 import NaturalLanguage
 
 final class ExtractKeyWordsService {
-    
+
     /// Extract keywords from a text string, extracted words will be based on Natural Language Analysis, As Example: IOS, Core Animation.. etc, there is no extract from web-sources.
     /// - Parameters:
     ///   - stringBuffer: required string that will be extract keywords from it
@@ -36,6 +36,7 @@ final class ExtractKeyWordsService {
         ]
         let textRange = stringBuffer.startIndex..<stringBuffer.endIndex
         tagger.string = stringBuffer
+        let nlEmbedding = NLEmbedding.wordEmbedding(for: .english)!
         
         tagger.enumerateTags(
             in: textRange,
@@ -43,24 +44,33 @@ final class ExtractKeyWordsService {
             scheme: .nameTypeOrLexicalClass, options: options
         ) { tokenTag, tokenRange in
             
-            guard let tokenTag = tokenTag else {
+            guard let tokenTag = tokenTag,
+                  acceptedTags.contains(tokenTag) else {
                 return true
             }
-            if(acceptedTags.contains(tokenTag)) {
-                
-                let extractedToken = stringBuffer[tokenRange]
-                if (extractedToken.count > 1) {
-
-                    keywordsBuffer.insert(
-                        OrcaKeyword.init(
-                            keywordValue: .init(extractedToken),
-                            suitable: isSuitable
-                        )
-                    )
-                    
-                }
-                
+            
+            let extractedToken = String.init(stringBuffer[tokenRange]).lowercased()
+            guard extractedToken.count > 1 else {
+                return true
             }
+            
+            // MARK: - I Think it's will not support opportunities outside tech
+            let isTechConcept =
+            nlEmbedding.neighbors(
+                    for: extractedToken, maximumCount: 1
+            ).isEmpty == true
+
+            
+            guard isTechConcept == true else {
+                return true
+            }
+
+            keywordsBuffer.insert(
+                OrcaKeyword.init(
+                    keywordValue: extractedToken,
+                    suitable: isSuitable
+                )
+            )
             return true
         }
         return keywordsBuffer

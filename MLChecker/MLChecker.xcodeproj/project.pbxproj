@@ -11,7 +11,23 @@
 		61A6D2252B3FAE6A0015BB04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6D2242B3FAE6A0015BB04 /* ViewController.swift */; };
 		61A6D2272B3FAE6C0015BB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A6D2262B3FAE6C0015BB04 /* Assets.xcassets */; };
 		61A6D22A2B3FAE6C0015BB04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A6D2282B3FAE6C0015BB04 /* Main.storyboard */; };
+		61ABC5932B446BC600B5F646 /* OrcaEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61ABC5922B446BC600B5F646 /* OrcaEngine.framework */; };
+		61ABC5942B446BC600B5F646 /* OrcaEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61ABC5922B446BC600B5F646 /* OrcaEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		61ABC5952B446BC600B5F646 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				61ABC5942B446BC600B5F646 /* OrcaEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		61A6D21F2B3FAE6A0015BB04 /* MLChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +36,7 @@
 		61A6D2262B3FAE6C0015BB04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61A6D2292B3FAE6C0015BB04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61A6D22B2B3FAE6C0015BB04 /* MLChecker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MLChecker.entitlements; sourceTree = "<group>"; };
+		61ABC5922B446BC600B5F646 /* OrcaEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OrcaEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61ABC5932B446BC600B5F646 /* OrcaEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +56,7 @@
 			children = (
 				61A6D2212B3FAE6A0015BB04 /* MLChecker */,
 				61A6D2202B3FAE6A0015BB04 /* Products */,
+				61ABC5912B446BC600B5F646 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +80,14 @@
 			path = MLChecker;
 			sourceTree = "<group>";
 		};
+		61ABC5912B446BC600B5F646 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61ABC5922B446BC600B5F646 /* OrcaEngine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +98,7 @@
 				61A6D21B2B3FAE6A0015BB04 /* Sources */,
 				61A6D21C2B3FAE6A0015BB04 /* Frameworks */,
 				61A6D21D2B3FAE6A0015BB04 /* Resources */,
+				61ABC5952B446BC600B5F646 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
