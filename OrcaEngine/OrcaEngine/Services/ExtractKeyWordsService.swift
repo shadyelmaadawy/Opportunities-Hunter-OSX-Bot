@@ -26,12 +26,13 @@ final class ExtractKeyWordsService {
         let options: NLTagger.Options = [
             .omitPunctuation,
             .omitWhitespace,
-            .joinNames
+            .joinNames,
         ]
         
         let acceptedTags: [NLTag] = [
             .noun,
             .adjective,
+            .placeName,
             .organizationName,
         ]
         let textRange = stringBuffer.startIndex..<stringBuffer.endIndex
@@ -53,13 +54,12 @@ final class ExtractKeyWordsService {
             guard extractedToken.count > 1 else {
                 return true
             }
-            
+
             // MARK: - I Think it's will not support opportunities outside tech
             let isTechConcept =
             nlEmbedding.neighbors(
                     for: extractedToken, maximumCount: 1
             ).isEmpty == true
-
             
             guard isTechConcept == true else {
                 return true
