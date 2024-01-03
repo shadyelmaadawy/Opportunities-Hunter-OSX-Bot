@@ -45,13 +45,12 @@ final class ExtractKeyWordsService {
             scheme: .nameTypeOrLexicalClass, options: options
         ) { tokenTag, tokenRange in
             
-            guard let tokenTag = tokenTag,
-                  acceptedTags.contains(tokenTag) else {
+            guard let tokenTag = tokenTag, acceptedTags.contains(tokenTag) else {
                 return true
             }
             
             let extractedToken = String.init(stringBuffer[tokenRange]).lowercased()
-            guard extractedToken.count > 1 else {
+            guard extractedToken.count > 2 else {
                 return true
             }
 

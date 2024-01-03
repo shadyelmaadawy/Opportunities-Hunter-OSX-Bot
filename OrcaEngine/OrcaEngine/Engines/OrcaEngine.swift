@@ -50,7 +50,6 @@ public extension OrcaEngine {
     ///   - stringBuffer: required string that will be extract keywords from it
     ///   - isSuitable: status of opportunity if it suitable or not
     /// - Returns: Set with keywords
-    
     func extractKeywords(_ stringBuffer: String, isSuitable: Bool) -> Set<OrcaKeyword> {
         return extractService.extractKeyWords(stringBuffer, isSuitable: isSuitable)
     }
