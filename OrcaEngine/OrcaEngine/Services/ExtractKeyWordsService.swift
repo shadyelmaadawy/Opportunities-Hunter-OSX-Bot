@@ -44,6 +44,9 @@ final class ExtractKeyWordsService {
             .conjunction,
             .interjection,
             .adverb,
+            .pronoun,
+            .particle,
+            .number
         ]
         
         let textRange = stringBuffer.startIndex..<stringBuffer.endIndex
