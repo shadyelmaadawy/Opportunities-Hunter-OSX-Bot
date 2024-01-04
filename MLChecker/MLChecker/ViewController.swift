@@ -33,9 +33,9 @@ class ViewController: NSViewController {
     let engine = OrcaEngine.init()
     @IBAction func checkClick(_ sender: Any) {
         
-                guard let jobBuffer = jobTextField.textStorage?.string else {
-                    return
-                }
+    guard let jobBuffer = jobTextField.textStorage?.string else {
+        return
+    }
 
         engine.extractKeywords(
             jobBuffer,

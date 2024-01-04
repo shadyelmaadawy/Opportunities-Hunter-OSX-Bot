@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class OrcaKeyword: Hashable {
+public final class OrcaKeyword: Hashable, Codable {
     
     // MARK: - Properties
 

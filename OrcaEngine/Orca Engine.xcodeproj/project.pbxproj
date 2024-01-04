@@ -10,6 +10,7 @@
 		61035DA62B43BA3E004B2A3B /* OrcaKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61035DA52B43BA3E004B2A3B /* OrcaKeyword.swift */; };
 		61035DA82B43BB16004B2A3B /* ExtractKeyWordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61035DA72B43BB16004B2A3B /* ExtractKeyWordsService.swift */; };
 		619E7CDE2B4525EC0067421F /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 619E7CDD2B4525EC0067421F /* SQLite */; };
+		619E7CE02B455F750067421F /* OrcaOpportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619E7CDF2B455F750067421F /* OrcaOpportunity.swift */; };
 		61B92AE82B40E56100987305 /* OrcaEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = 61B92AE72B40E56100987305 /* OrcaEngine.docc */; };
 		61B92AE92B40E56100987305 /* OrcaEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B92AE62B40E56100987305 /* OrcaEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61B92AFA2B41217C00987305 /* OrcaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B92AF92B41217C00987305 /* OrcaModel.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		61035DA52B43BA3E004B2A3B /* OrcaKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaKeyword.swift; sourceTree = "<group>"; };
 		61035DA72B43BB16004B2A3B /* ExtractKeyWordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractKeyWordsService.swift; sourceTree = "<group>"; };
+		619E7CDF2B455F750067421F /* OrcaOpportunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcaOpportunity.swift; sourceTree = "<group>"; };
 		61B92AE32B40E56100987305 /* OrcaEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OrcaEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B92AE62B40E56100987305 /* OrcaEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrcaEngine.h; sourceTree = "<group>"; };
 		61B92AE72B40E56100987305 /* OrcaEngine.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OrcaEngine.docc; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				61B92AF92B41217C00987305 /* OrcaModel.swift */,
 				61035DA52B43BA3E004B2A3B /* OrcaKeyword.swift */,
+				619E7CDF2B455F750067421F /* OrcaOpportunity.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				61B92B0B2B415A5200987305 /* MLTrainService.swift in Sources */,
 				61B92AE82B40E56100987305 /* OrcaEngine.docc in Sources */,
 				61B92B0D2B415AC500987305 /* MLQueryService.swift in Sources */,
+				619E7CE02B455F750067421F /* OrcaOpportunity.swift in Sources */,
 				61B92B122B415D9800987305 /* MLQueryServiceConfigurator.swift in Sources */,
 				61B92B062B413F7900987305 /* OrcaEngine.swift in Sources */,
 				61035DA62B43BA3E004B2A3B /* OrcaKeyword.swift in Sources */,

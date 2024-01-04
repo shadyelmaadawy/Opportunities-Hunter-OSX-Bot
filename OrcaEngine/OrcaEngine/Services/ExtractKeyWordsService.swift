@@ -31,12 +31,24 @@ final class ExtractKeyWordsService {
         
         let acceptedTags: [NLTag] = [
             .noun,
-            .adjective,
             .placeName,
+            .personalName,
             .organizationName,
         ]
+        
+        let nonAcceptedTags: [NLTag] = [
+            .preposition,
+            .adjective,
+            .verb,
+            .determiner,
+            .conjunction,
+            .interjection,
+            .adverb,
+        ]
+        
         let textRange = stringBuffer.startIndex..<stringBuffer.endIndex
         tagger.string = stringBuffer
+        
         let nlEmbedding = NLEmbedding.wordEmbedding(for: .english)!
         
         tagger.enumerateTags(
@@ -45,20 +57,30 @@ final class ExtractKeyWordsService {
             scheme: .nameTypeOrLexicalClass, options: options
         ) { tokenTag, tokenRange in
             
-            guard let tokenTag = tokenTag, acceptedTags.contains(tokenTag) else {
+            guard let tokenTag = tokenTag else {
                 return true
             }
-            
-            let extractedToken = String.init(stringBuffer[tokenRange]).lowercased()
+
+            let extractedToken = String.init(
+                stringBuffer[tokenRange]
+            ).lowercased()
             guard extractedToken.count > 2 else {
                 return true
             }
 
-            // MARK: - I Think it's will not support opportunities outside tech
-            let isTechConcept =
-            nlEmbedding.neighbors(
+            if(nonAcceptedTags.contains(tokenTag)) {
+                return true
+            }
+            
+            var isTechConcept = false
+            if(tokenTag == .adjective || tokenTag == .noun) {
+                isTechConcept = nlEmbedding.neighbors(
                     for: extractedToken, maximumCount: 1
-            ).isEmpty == true
+                ).isEmpty == true
+
+            } else {
+                isTechConcept = true
+            }
             
             guard isTechConcept == true else {
                 return true
