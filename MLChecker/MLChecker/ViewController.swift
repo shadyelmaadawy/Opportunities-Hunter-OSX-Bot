@@ -10,7 +10,7 @@ import CoreML
 import OrcaEngine
 
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
     @IBOutlet var jobTextField: NSTextView!
     @IBOutlet weak var resultTextField: NSTextField!
@@ -29,45 +29,39 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
+    @IBOutlet weak var keyWordsTable: NSTableView!
+    var keywords :Set<OrcaKeyword> = .init()
     let engine = OrcaEngine.init()
     @IBAction func checkClick(_ sender: Any) {
         
     guard let jobBuffer = jobTextField.textStorage?.string else {
         return
     }
-
+        keywords.removeAll(keepingCapacity: true)
         engine.extractKeywords(
             jobBuffer,
             isSuitable: true
         ).forEach({ value in
-            print("Keyword: \(value.keywordValue)")
+            keywords.insert(value)
         })
-        //
-//        guard let jobBuffer = jobTextField.textStorage?.string else {
-//            return
-//        }
-//        
-//        let jobModel = try? AreYouIOSDev.init(
-//            configuration: .init()
-//        )
-//        guard let jobModel = jobModel else {
-//            return
-//        }
-//        
-//        let jobInput = AreYouIOSDevInput(text: jobBuffer.lowercased())
-//        
-//        guard let checkResult = try? jobModel.prediction(input: jobInput) else {
-//            return
-//        }
-//
-//        resultTextField.stringValue = "Are you IOS Developer? \(checkResult.label)"
-//        if(checkResult.label == "yes") {
-//            resultTextField.textColor = .systemBlue
-//        } else {
-//            resultTextField.textColor = .systemRed
-//        }
         
+        keyWordsTable.reloadData()
+    }
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return keywords.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        
+        guard let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier("Keywords Cell"), owner: self) as? NSTableCellView else { return nil }
+        
+        let setIndx = keywords.index(keywords.startIndex, offsetBy: row)
+        let keyword = keywords[setIndx]
+        cell.textField?.stringValue = keyword.keywordValue
+
+        return cell
+
     }
 }
 

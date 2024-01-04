@@ -6,8 +6,8 @@ the project has not been canceled, but I will work on it in parallel with other 
 
 ### NOTE:
 
-Finishing this project is my highest priority ; )
-        
+I do not need to gain burnout to be satisfied, will be developed in parallel with other things
+ 
 ----------------
 
 I have no rules, I have a mindset, When I want to do something, I do it.

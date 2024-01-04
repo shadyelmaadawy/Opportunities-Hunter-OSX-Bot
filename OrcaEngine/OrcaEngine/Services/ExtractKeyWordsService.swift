@@ -31,22 +31,22 @@ final class ExtractKeyWordsService {
         
         let acceptedTags: [NLTag] = [
             .noun,
+            .adjective,
             .placeName,
             .personalName,
             .organizationName,
         ]
         
         let nonAcceptedTags: [NLTag] = [
-            .preposition,
-            .adjective,
             .verb,
+            .adverb,
+            .number,
+            .pronoun,
+            .particle,
+            .preposition,
             .determiner,
             .conjunction,
             .interjection,
-            .adverb,
-            .pronoun,
-            .particle,
-            .number
         ]
         
         let textRange = stringBuffer.startIndex..<stringBuffer.endIndex
@@ -76,7 +76,7 @@ final class ExtractKeyWordsService {
             }
             
             var isTechConcept = false
-            if(tokenTag == .adjective || tokenTag == .noun) {
+            if(acceptedTags.contains(tokenTag)) {
                 isTechConcept = nlEmbedding.neighbors(
                     for: extractedToken, maximumCount: 1
                 ).isEmpty == true
@@ -84,7 +84,7 @@ final class ExtractKeyWordsService {
             } else {
                 isTechConcept = true
             }
-            
+
             guard isTechConcept == true else {
                 return true
             }
